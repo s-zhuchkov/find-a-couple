@@ -13,6 +13,9 @@
 		D5E70316203A0D8B009133CC /* Concentration.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5E70314203A0D8B009133CC /* Concentration.xcdatamodeld */; };
 		D5E70318203A0D8B009133CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5E70317203A0D8B009133CC /* Assets.xcassets */; };
 		D5E7031B203A0D8B009133CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5E70319203A0D8B009133CC /* LaunchScreen.storyboard */; };
+		D5E70324203D0B17009133CC /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E70323203D0B17009133CC /* Concentration.swift */; };
+		D5E70326203D0B8B009133CC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E70325203D0B8B009133CC /* Card.swift */; };
+		D5FEFC342055C93A00C98279 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEFC332055C93A00C98279 /* Emoji.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		D5E70317203A0D8B009133CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5E7031A203A0D8B009133CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5E7031C203A0D8B009133CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5E70323203D0B17009133CC /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
+		D5E70325203D0B8B009133CC /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		D5FEFC332055C93A00C98279 /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,26 @@
 		D5E7030C203A0D8B009133CC /* Concentration */ = {
 			isa = PBXGroup;
 			children = (
-				D5E7030D203A0D8B009133CC /* AppDelegate.swift */,
+				D5E70322203A1014009133CC /* Supportin files */,
 				D5E7030F203A0D8B009133CC /* ViewController.swift */,
 				D5E70311203A0D8B009133CC /* Main.storyboard */,
-				D5E70317203A0D8B009133CC /* Assets.xcassets */,
-				D5E70319203A0D8B009133CC /* LaunchScreen.storyboard */,
 				D5E7031C203A0D8B009133CC /* Info.plist */,
+				D5FEFC332055C93A00C98279 /* Emoji.swift */,
 				D5E70314203A0D8B009133CC /* Concentration.xcdatamodeld */,
+				D5E70323203D0B17009133CC /* Concentration.swift */,
+				D5E70325203D0B8B009133CC /* Card.swift */,
 			);
 			path = Concentration;
+			sourceTree = "<group>";
+		};
+		D5E70322203A1014009133CC /* Supportin files */ = {
+			isa = PBXGroup;
+			children = (
+				D5E7030D203A0D8B009133CC /* AppDelegate.swift */,
+				D5E70317203A0D8B009133CC /* Assets.xcassets */,
+				D5E70319203A0D8B009133CC /* LaunchScreen.storyboard */,
+			);
+			path = "Supportin files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5FEFC342055C93A00C98279 /* Emoji.swift in Sources */,
 				D5E70310203A0D8B009133CC /* ViewController.swift in Sources */,
+				D5E70324203D0B17009133CC /* Concentration.swift in Sources */,
+				D5E70326203D0B8B009133CC /* Card.swift in Sources */,
 				D5E70316203A0D8B009133CC /* Concentration.xcdatamodeld in Sources */,
 				D5E7030E203A0D8B009133CC /* AppDelegate.swift in Sources */,
 			);
@@ -282,7 +302,7 @@
 				DEVELOPMENT_TEAM = 5AYVYT2XQU;
 				INFOPLIST_FILE = Concentration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = szhuchkov.Concentration;
+				PRODUCT_BUNDLE_IDENTIFIER = fm.szhuchkov.comcentration;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -297,7 +317,7 @@
 				DEVELOPMENT_TEAM = 5AYVYT2XQU;
 				INFOPLIST_FILE = Concentration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = szhuchkov.Concentration;
+				PRODUCT_BUNDLE_IDENTIFIER = fm.szhuchkov.comcentration;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
