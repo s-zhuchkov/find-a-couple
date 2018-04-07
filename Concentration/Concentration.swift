@@ -15,6 +15,10 @@ class Concetration{
     var countOfMatch = 0
     var flipCount = 0
     var scoreAmount = 0
+    private var numOfMatchingCards = 0
+    private var startDate: Date
+    private var endDate: Date
+    
     
     func chooseCard(at index: Int){
         
@@ -51,6 +55,11 @@ class Concetration{
                 }
                 precedingCardAndFaceUpOnlyIdx = index
             }
+            
+            // check end of game
+            if (numOfMatchingCards * 2) == cards.count {
+                endDate = Date()
+            }
         }
     }
     
@@ -58,6 +67,7 @@ class Concetration{
         
         if cards[currentIdx].isMatched && cards[presedingIdx].isMatched {
             scoreAmount += 2
+            numOfMatchingCards += 1
         } else {
             scoreAmount -= cards[currentIdx].isChosen ? 1 : 0
             scoreAmount -= cards[presedingIdx].isChosen ? 1 : 0
@@ -67,7 +77,27 @@ class Concetration{
         cards[presedingIdx].isChosen = true
     }
     
+    func getTimeScore() -> String? {
+        let durationOfGame = endDate.timeIntervalSince(startDate)
+        
+        if durationOfGame > 0 && scoreAmount > 0{
+            
+            let goodTime = 70.0
+            
+            let bonus = (goodTime / durationOfGame) * Double(scoreAmount)
+            
+            return String(Int(bonus.rounded(.toNearestOrAwayFromZero)))
+        }
+        else{
+            return nil
+        }
+    }
+    
     init(numberOfPairstOfCads: Int) {
+        
+        let sysdate = Date()
+        startDate = sysdate
+        endDate = sysdate
         
         var orderedList = Array<Card>()
         for _ in 1 ... numberOfPairstOfCads{
@@ -76,6 +106,7 @@ class Concetration{
             orderedList += [card, card]
         }
         
+        // shuffle all cards
         for _ in orderedList.indices{
             let randomIdx = Int(arc4random_uniform(UInt32(orderedList.count)))
             cards += [orderedList.remove(at: randomIdx)]

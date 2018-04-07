@@ -14,11 +14,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     
+    @IBOutlet weak var bonusLabel: UILabel!
+    
     @IBOutlet var cardButtons: [UIButton]!
     
     @IBOutlet weak var newGame: UIButton!
     
-    @IBOutlet weak var themeChooser: UISegmentedControl!
     
     
     // 3 / 2 = 1 (for int type) int целочисленный тип, происходит приведение типов
@@ -59,7 +60,8 @@ class ViewController: UIViewController {
     func updateViewFromModel(){
         
         flipsLabel.text = "Flips: \(game!.flipCount)"
-        scoreLabel.text = "Score : \(game!.scoreAmount)"
+        scoreLabel.text = "Score: \(game!.scoreAmount)"
+        bonusLabel.text = "Bonus: \(game!.getTimeScore() ?? "0")"
         
         for index in cardButtons.indices{
             let card: Card = game!.cards[index]
@@ -84,11 +86,10 @@ class ViewController: UIViewController {
             //button.setTitle(emojiCards[card.identifier], for: UIControlState.normal)
         }
     }
-    
 
     
     // usual variant implemente dictioanry
-    //var emoji1 = Dictionary<Int, String>()
+    // var emoji1 = Dictionary<Int, String>()
     // short variant implement dictioanary
     var emojiCards = [Int: String]()
     

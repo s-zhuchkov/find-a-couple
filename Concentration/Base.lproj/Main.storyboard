@@ -20,10 +20,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yGn-OL-WpQ">
-                                <rect key="frame" x="21" y="614" width="333" height="30"/>
+                                <rect key="frame" x="10" y="611" width="355" height="33"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9u-sv-2mN">
-                                        <rect key="frame" x="0.0" y="0.0" width="105.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="83" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="New game">
                                             <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -32,13 +33,19 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbL-VQ-pBZ">
-                                        <rect key="frame" x="113.5" y="0.0" width="106" height="30"/>
+                                        <rect key="frame" x="91" y="0.0" width="82.5" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.13111001253128052" green="0.99708515405654907" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bonus : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ok0-Eo-8Jh">
+                                        <rect key="frame" x="181.5" y="0.0" width="83" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.13111001250000001" green="0.99708515409999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flips : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pp7-Yf-Iti">
-                                        <rect key="frame" x="227.5" y="0.0" width="105.5" height="30"/>
+                                        <rect key="frame" x="272.5" y="0.0" width="82.5" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -324,9 +331,9 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yGn-OL-WpQ" secondAttribute="bottom" constant="23" id="7O4-9p-dOz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yGn-OL-WpQ" secondAttribute="trailing" constant="21" id="MoI-Wh-36e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yGn-OL-WpQ" secondAttribute="trailing" constant="10" id="MoI-Wh-36e"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wKh-JD-k5q" secondAttribute="trailing" constant="16" id="UwS-Sp-ccU"/>
-                            <constraint firstItem="yGn-OL-WpQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="jvd-0V-GSa"/>
+                            <constraint firstItem="yGn-OL-WpQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="jvd-0V-GSa"/>
                             <constraint firstItem="wKh-JD-k5q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="p6A-qk-k6a"/>
                             <constraint firstItem="yGn-OL-WpQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wKh-JD-k5q" secondAttribute="bottom" id="sZn-xZ-iei"/>
                             <constraint firstItem="wKh-JD-k5q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sbx-jX-Dmu"/>
@@ -335,6 +342,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bonusLabel" destination="ok0-Eo-8Jh" id="62K-Vh-x4F"/>
                         <outlet property="flipsLabel" destination="pp7-Yf-Iti" id="gWv-2H-apb"/>
                         <outlet property="newGame" destination="i9u-sv-2mN" id="fdB-fW-YWq"/>
                         <outlet property="scoreLabel" destination="dbL-VQ-pBZ" id="qko-DQ-w34"/>
