@@ -43,6 +43,7 @@ class ViewController: UIViewController {
         emoji = Emoji(numberOfPairstOfCads: (cardButtons.count + 1) / 2)
         initEmojiCards()
         updateViewFromModel()
+        self.view.backgroundColor = emoji?.getBackGroundColor()
     }
     
     
@@ -74,10 +75,10 @@ class ViewController: UIViewController {
                 button.setTitle("", for: UIControlState.normal)
 
                 if card.isMatched{
-                    button.backgroundColor = #colorLiteral(red: 0.03041346744, green: 0.01480212808, blue: 0.04129511863, alpha: 0)
+                    button.backgroundColor = #colorLiteral(red: 0.03864920512, green: 0.03963567317, blue: 0.01334425248, alpha: 0)
                     button.isEnabled = false
                 } else {
-                    button.backgroundColor = #colorLiteral(red: 0.01903299242, green: 0.9668006301, blue: 0.9766166806, alpha: 1)
+                    button.backgroundColor = emoji?.getCardColor()
                     button.isEnabled = true
                 }
             }
